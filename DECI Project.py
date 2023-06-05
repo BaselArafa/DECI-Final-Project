@@ -14,6 +14,8 @@ lose =  random.choice(los)
 
 
 def main():
+    #use sleep functions between lines 
+    #to make the game slow enough
     time.sleep(2)
     #first scene
     print("while on a walk in the woods \
@@ -25,18 +27,23 @@ magic wood is calling you.")
     print("you stumbled upon a secret \
 pathway you had never seen before")
     time.sleep(2)
+    #telling the player his score
     print("Total score = " + str(ts) )
     print("Enter 1 to follow the pathway. ")
     print("Enter 2 to respond to the strange man.")
-
+    
+    #ask for an answer
     ans = input("(please enter 1 or 2)")
+    
     #check the answer
     while ans != "1" and ans != "2" :
         ans = input("(please enter 1 or 2)")
 
-
+    #define choise 1
     def pathway ():
+        #when will this scene run
         if ans == "1" :
+            #new score
             ts = 5
             time.sleep(2)
             print(" Curious, you followed the \
@@ -50,9 +57,11 @@ the mansion and decided to investigate further.")
             print("Enter 1 to continue ")
             print("Enter 2 to run away ")
 
-
+    #define choise 2
     def man ():
+        #when will this scene run
         if ans == "2" :
+            #new score
             ts =  5
             time.sleep(2)
             print("you followed the strange man")
@@ -63,15 +72,18 @@ the mansion and decided to investigate further.")
             print("Total score = " + str(ts) )
             print("Enter 1 to follow him ")
             print("Enter 2 to run away ")
-
+    #run scenes for the choise player will choose
     pathway()
     man()
-
+    
+    #ask for new answer
     ans2 = input("(please enter 1 or 2)")
+
     #check the answer
     while ans2 != "1" and ans2 != "2" :
         ans2 = input("(please enter 1 or 2)")
 
+    #define choises
 
     def Continue ():
         if ans== "1" and ans2 == "1":
@@ -104,8 +116,8 @@ the table . blue and red one")
 his magic wood !!!!")
             print(lose)
             print("Total score = " + str(ts) )
+            
             #replay function
-
             replay = input("Play again ?  y/n ")
             while str(replay)!="y" and str(replay)!="n":
                 replay = input("Play again ?  y/n ")
@@ -128,11 +140,13 @@ his magic wood !!!!")
             print(lose)
             print("Total score = " + str(ts) )
 
+            #replay function
             replay = input("Play again ?  y/n ")
             while str(replay)!="y" and str(replay)!="n":
                 replay = input("Play again ?  y/n ")
             if str(replay)== "y" :
                 main()
+            #end game function
             elif str(replay)== "n" :
                 print("see you later .")
                 time.sleep(2)
@@ -152,17 +166,20 @@ and found yourself in front of a ...")
             print("Enter 1 to Enter the house")
             print("Enter 2 to come back")
 
+    #run choises
     Continue()
     runaway()
     follow()
     Runaway()
 
+    #ask for new answers
     ans3 = input("(please enter 1 or 2)")
     #check the answer
     while ans3 != "1" and ans3 != "2" :
         ans3 = input("(please enter 1 or 2)")
 
 
+    #define new scenes
     def blue ():
         if ans== "1" and ans2 == "1"\
            and ans3 =="1" :
@@ -204,11 +221,13 @@ of the rooms and killed you!!!!")
             print(lose)
             print("Total score = " + str(ts) )
 
+            #replay function
             replay = input("Play again ?  y/n ")
             while str(replay)!="y" and str(replay)!="n":
                 replay = input("Play again ?  y/n ")
             if str(replay)== "y" :
                 main()
+            #end game function
             elif str(replay)== "n" :
                 print("see you later .")
                 time.sleep(2)
@@ -226,11 +245,13 @@ his magic wood !!!!")
             print(lose)
             print("Total score = " + str(ts) )
 
+            #replay function
             replay = input("Play again ?  y/n ")
             while str(replay)!="y" and str(replay)!="n":
                 replay = input("Play again ?  y/n ")
             if str(replay)== "y" :
                 main()
+            #end game function
             elif str(replay)== "n" :
                 print("see you later .")
                 time.sleep(2)
@@ -241,6 +262,7 @@ his magic wood !!!!")
     enter()
     come()
 
+    #ask for a new answers
     ans4 = input("(Please enter 1 or 2)")
     #check the answer
     while ans4 != "1" and ans4 != "2" :
@@ -258,12 +280,14 @@ the box and killed you !!")
             time.sleep(2)
             print(lose)
             print("Total score = " + str(ts) )
-
+            
+            #replay function
             replay = input("Play again ?  y/n ")
             while str(replay)!="y" and str(replay)!="n":
                 replay = input("Play again ?  y/n ")
             if str(replay)== "y" :
                 main()
+            #end game function
             elif str(replay)== "n" :
                 print("see you later .")
                 time.sleep(2)
@@ -395,5 +419,6 @@ his magic wood !!!!")
     GR()
     RA()
 #run the game
+
 
 main()
